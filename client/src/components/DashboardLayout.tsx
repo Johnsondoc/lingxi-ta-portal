@@ -44,7 +44,7 @@ import { DashboardLayoutSkeleton } from './DashboardLayoutSkeleton';
 import { Button } from "./ui/button";
 
 const menuItems = [
-  { icon: LayoutDashboard, label: "首页仪表盘", path: "/" },
+  { icon: LayoutDashboard, label: "首页仪表盘", path: "/dashboard" },
   { icon: BookOpen, label: "班级作业管理", path: "/class-assignments" },
   { icon: PenLine, label: "作业批改", path: "/homework" },
   { icon: SendHorizonal, label: "发布任务", path: "/publish-task" },
