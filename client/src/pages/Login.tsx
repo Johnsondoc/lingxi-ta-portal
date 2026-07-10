@@ -5,8 +5,8 @@ import { Loader2, Eye, EyeOff } from "lucide-react";
 export default function Login() {
   const [, setLocation] = useLocation();
   const [tab, setTab] = useState<"account" | "phone">("account");
-  const [staffId, setStaffId] = useState("");
-  const [password, setPassword] = useState("");
+  const [staffId, setStaffId] = useState("T2024001");
+  const [password, setPassword] = useState("demo123456");
   const [phone, setPhone] = useState("");
   const [code, setCode] = useState("");
   const [remember, setRemember] = useState(true);
