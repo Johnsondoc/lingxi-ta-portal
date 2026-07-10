@@ -19,32 +19,29 @@ import ParentCommunication from "./pages/ParentCommunication";
 import ClassAnnouncements from "./pages/ClassAnnouncements";
 import WorkLog from "./pages/WorkLog";
 
+const withLayout = (Component: React.ComponentType) => () => (
+  <DashboardLayout>
+    <Component />
+  </DashboardLayout>
+);
+
 function Router() {
   return (
     <Switch>
       <Route path="/login" component={Login} />
-      <Route path="/dashboard">
-        {() => (
-          <DashboardLayout>
-            <Switch>
-              <Route path="/dashboard" component={Dashboard} />
-              <Route path="/class-assignments" component={ClassAssignments} />
-              <Route path="/homework" component={Homework} />
-              <Route path="/publish-task" component={PublishTask} />
-              <Route path="/student-profile" component={StudentProfile} />
-              <Route path="/messages" component={Messages} />
-              <Route path="/course-library" component={CourseLibrary} />
-              <Route path="/grading-progress" component={GradingProgress} />
-              <Route path="/cohort-analysis" component={CohortAnalysis} />
-              <Route path="/parent-communication" component={ParentCommunication} />
-              <Route path="/class-announcements" component={ClassAnnouncements} />
-              <Route path="/work-log" component={WorkLog} />
-              <Route path="/404" component={NotFound} />
-              <Route component={NotFound} />
-            </Switch>
-          </DashboardLayout>
-        )}
-      </Route>
+      <Route path="/dashboard" component={withLayout(Dashboard)} />
+      <Route path="/class-assignments" component={withLayout(ClassAssignments)} />
+      <Route path="/homework" component={withLayout(Homework)} />
+      <Route path="/publish-task" component={withLayout(PublishTask)} />
+      <Route path="/student-profile" component={withLayout(StudentProfile)} />
+      <Route path="/messages" component={withLayout(Messages)} />
+      <Route path="/course-library" component={withLayout(CourseLibrary)} />
+      <Route path="/grading-progress" component={withLayout(GradingProgress)} />
+      <Route path="/cohort-analysis" component={withLayout(CohortAnalysis)} />
+      <Route path="/parent-communication" component={withLayout(ParentCommunication)} />
+      <Route path="/class-announcements" component={withLayout(ClassAnnouncements)} />
+      <Route path="/work-log" component={withLayout(WorkLog)} />
+      <Route path="/404" component={NotFound} />
       <Route path="/">
         {() => { window.location.replace("/login"); return null; }}
       </Route>
