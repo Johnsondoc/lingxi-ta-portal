@@ -236,7 +236,7 @@ function DashboardLayoutContent({
             </div>
           </div>
         )}
-        <main className="flex-1 p-5 bg-gray-50/50 min-h-screen">{children}</main>
+        <main className="flex-1 bg-gray-50/50 overflow-hidden" style={{ height: "calc(100vh - 0px)" }}>{children}</main>
       </SidebarInset>
     </>
   );

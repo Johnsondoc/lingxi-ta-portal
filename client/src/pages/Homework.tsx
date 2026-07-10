@@ -221,7 +221,7 @@ function MCQuestion({ num, color, title, question, options, correct, studentPick
   isWrong: boolean; aiAnalysis?: string; aiTags?: string[];
 }) {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-xl border border-gray-200">
       {/* Header */}
       <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100">
         <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0" style={{ background: color }}>{num}</div>
@@ -343,7 +343,7 @@ function WrittenQuestion({ num, color, qNum, question, answerLines, aiSuggestion
   }, []);
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+    <div className="bg-white rounded-xl border border-gray-200">
       {/* Header */}
       <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-100">
         <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0" style={{ background: color }}>{num}</div>
