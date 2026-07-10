@@ -120,7 +120,7 @@ export default function Login() {
       }}>
         <div style={{ width: "100%", maxWidth: "420px" }}>
           <h2 style={{ fontSize: "24px", fontWeight: 700, color: "#1e293b", marginBottom: "6px" }}>
-            助教驻驶舱登录
+            助教端登录
           </h2>
           <p style={{ fontSize: "13px", color: "#94a3b8", marginBottom: "28px" }}>
             使用工号登录您的助教账号
